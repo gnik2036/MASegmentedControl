@@ -50,7 +50,7 @@ extension MASegmentedControl {
     // MARK: TRANSLATION OF THUMBVIEW WITH ANIMATION ON TAP
     
     //Movement of thumbview if fillEqually = true
-    private func moveThumbView(at index: Int) {
+     func moveThumbView(at index: Int) {
         
         let selectedStartPosition = index == 0 ? self.padding : bounds.width / CGFloat(buttons.count) *  CGFloat(index) + self.padding
         UIView.animate(withDuration: TimeInterval(self.animationDuration), animations: {
@@ -59,7 +59,7 @@ extension MASegmentedControl {
     }
     
     //Movement of thumbview if fillEqually = false
-    private func moveThumbViewFillEquallyFalse(at index: Int) {
+     func moveThumbViewFillEquallyFalse(at index: Int) {
         
         let firstelementPositionX = self.padding
         let lastElemetPositionX = bounds.width - thumbView.frame.width - padding
